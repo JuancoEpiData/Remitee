@@ -13,7 +13,7 @@ namespace ExamenRemitee.SMTP
             try
             {
                 using MailMessage correo = new MailMessage();
-                correo.From = new MailAddress("juancomande@gmail.com", "Error proceso CurrencyLayer", System.Text.Encoding.UTF8);
+                correo.From = new MailAddress("", "Error proceso CurrencyLayer", System.Text.Encoding.UTF8);
                 correo.To.Add("juancomande@gmail.com");
                 correo.Subject = "Error proceso CurrencyLayer";
                 correo.Body = $"Hubo un error en el proceso a las {DateTime.Now}. {Environment.NewLine} {mensaje}";
@@ -23,7 +23,7 @@ namespace ExamenRemitee.SMTP
                 smtp.UseDefaultCredentials = false;
                 smtp.Host = "smtp.gmail.com"; //Host del servidor de correo
                 smtp.Port = 25; //Puerto de salida
-                smtp.Credentials = new NetworkCredential("juancomande@gmail.com", "peperodrigez12");//Cuenta de correo
+                smtp.Credentials = new NetworkCredential("", "");//Cuenta de correo
                 ServicePointManager.ServerCertificateValidationCallback = delegate (object s, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
                 smtp.EnableSsl = true;//True si el servidor de correo permite ssl
                 smtp.Send(correo);
