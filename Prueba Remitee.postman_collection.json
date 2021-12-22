@@ -37,9 +37,30 @@
 		{
 			"name": "CalcularMontoOrigen OK",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"MonedaOrigen\":\"ARS\",\r\n    \"MonedaDestinoMonto\":100,\r\n    \"MonedaDestino\":\"BOB\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:14323/api/Consultas/CalcularMontoOrigen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "14323",
+					"path": [
+						"api",
+						"Consultas",
+						"CalcularMontoOrigen"
+					]
+				}
 			},
 			"response": []
 		}
