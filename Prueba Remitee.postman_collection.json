@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "43aefa6e-8107-4d07-aef0-aef97f0ec2f3",
+		"name": "Prueba Remitee",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CalcularMontoDestino OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"parametro\": \"hola\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:14323/api/Consultas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "14323",
+					"path": [
+						"api",
+						"Consultas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CalcularMontoOrigen OK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
